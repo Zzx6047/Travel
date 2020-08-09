@@ -59,24 +59,11 @@ export default {
       }]
     }
   },
-  mounted () {
-    const pages = []
-    this.iconList.forEach((item, index) => {
-      const page = Math.floor(index / 8)
-      console.log(page)
-      if (!pages[page]) {
-        pages[page] = []
-      }
-      pages[page].push(item)
-    })
-    return pages
-  },
   computed: {
     pages () {
       const pages = []
       this.iconList.forEach((item, index) => {
         const page = Math.floor(index / 8)
-
         if (!pages[page]) {
           pages[page] = []
         }
