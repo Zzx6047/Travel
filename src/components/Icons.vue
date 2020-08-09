@@ -59,18 +59,6 @@ export default {
       }]
     }
   },
-  mounted () {
-    const pages = []
-    this.iconList.forEach((item, index) => {
-      const page = Math.floor(index / 8)
-      console.log(page)
-      if (!pages[page]) {
-        pages[page] = []
-      }
-      pages[page].push(item)
-    })
-    return pages
-  },
   computed: {
     pages () {
       const pages = []
@@ -97,6 +85,7 @@ export default {
   padding-bottom: 50%;
 }
 .icons {
+  margin-top: .1rem;
   .icon {
     position: relative;
     overflow: hidden;
